@@ -1,0 +1,160 @@
+*,
+::after,
+::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--rotation: 0deg;
+}
+body {
+	background: url(./peace.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	min-height: 100vh;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.clock {
+	border: #f1f5f8 solid .5rem;
+	width: 400px;
+	height: 400px;
+	border-radius: 50%;
+	position: relative;
+}
+.clock::after {
+	border-radius: 50%;
+	display: block;
+	content: '';
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .5);
+}
+.clock .number {
+	font-family: 'Grandstander', cursive;
+	color: #f9fbfc;
+	font-weight: 600;
+	font-size: 1.6rem;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transform: rotate(var(--rotation));
+}
+.clock .needle {
+	position: absolute;
+	left: 50%;
+	bottom: 50%;
+	--rotation: 0;
+	transform: translateX(-50%) rotate(calc(var(--rotation)*1deg));
+	transform-origin: bottom;
+	-moz-transform-origin: bottom;
+}
+.clock .hour {
+	background-color: #5aa9aa;
+	width: 4px;
+	height: 20%;
+	z-index: 3;
+}
+.clock .second {
+	border: #cea838 dashed 1px;
+	width: 1px;
+	height: 42%;
+	z-index: 1;
+	--rotation: 30;
+}
+.clock .minute {
+	background-color: #32f249;
+	width: 2px;
+	height: 35%;
+	z-index: 2;
+	color: #ffab91;
+}
+#pop {
+	position: absolute;
+	border: #32f249 solid 1px;
+	transform: translateY(-100%);
+	font-size: 1.7rem;
+	display: block;
+	font-family: 'Long Cang', cursive;
+	padding: 2px;
+}
+.turn {
+	display: block;
+}
+.clock .number-1 {
+	--rotation: 30deg;
+}
+.clock .number-2 {
+	--rotation: 60deg;
+}
+.clock .number-3 {
+	--rotation: 90deg;
+}
+.clock .number-4 {
+	--rotation: 120deg;
+}
+.clock .number-5 {
+	--rotation: 150deg;
+}
+.clock .number-6 {
+	--rotation: 180deg;
+}
+.clock .number-7 {
+	--rotation: 210deg;
+}
+.clock .number-8 {
+	--rotation: 240deg;
+}
+.clock .number-9 {
+	--rotation: 270deg;
+}
+.clock .number-10 {
+	--rotation: 300deg;
+}
+.clock .number-11 {
+	--rotation: 330deg;
+}
+.awesome {
+	position: absolute;
+	left: 50%;
+	bottom: 50%;
+	transform: translate(-50%, 50%);
+	width: 1rem;
+	color: #222;
+	z-index: 4;
+	/* background-color: transparent; */
+}
+.number-6 span {
+	display: block;
+	transform: rotate(180deg);
+}
+.number-9 span {
+	display: block;
+	transform: rotate(90deg);
+}
+.number-3 span {
+	display: block;
+	transform: rotate(-90deg);
+}
+.number-4 span {
+	display: block;
+	transform: rotate(-110deg);
+}
+.number-5 span {
+	display: block;
+	transform: rotate(-140deg);
+}
+.number-7 span {
+	display: block;
+	transform: rotate(150deg);
+}
+.number-8 span {
+	display: block;
+	transform: rotate(110deg);
+}
